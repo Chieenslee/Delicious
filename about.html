@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhà Hàng Delicious - Giới Thiệu</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/logo/logo.jpg" alt="Logo" class="logo-image me-2">
+                <span>Delicious</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" title="Mở/đóng menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" title="Về trang chủ">Trang Chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html" title="Xem thông tin về chúng tôi">Giới Thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html" title="Xem thực đơn">Thực Đơn</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html" title="Xem thư viện ảnh">Thư Viện Ảnh</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html" title="Xem các sự kiện">Sự Kiện</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html" title="Liên hệ với chúng tôi">Liên Hệ</a>
+                    </li>
+                    <li class="nav-item ms-3">
+                        <a href="cart.html" class="position-relative" id="cartIcon" title="Xem giỏ hàng">
+                            <i class="bi bi-cart3 fs-5"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-count">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item ms-3">
+                        <a class="nav-link" href="login.html" title="Đăng nhập vào tài khoản">
+                            <i class="bi bi-person-circle fs-5"></i>
+                            <span class="ms-1">Đăng Nhập</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold" data-aos="fade-up">Về Chúng Tôi</h1>
+            <nav aria-label="breadcrumb" data-aos="fade-up" data-aos-delay="200">
+                <ol class="breadcrumb justify-content-center">
+                    <li class="breadcrumb-item"><a href="index.html" class="text-white">Trang Chủ</a></li>
+                    <li class="breadcrumb-item active text-white" aria-current="page">Giới Thiệu</li>
+                </ol>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Story Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="fw-bold mb-4">Câu Chuyện Của Chúng Tôi</h2>
+                    <p class="lead text-muted mb-4">Từ năm 2010, Delicious đã mang đến những trải nghiệm ẩm thực tuyệt vời cho thực khách.</p>
+                    <p class="mb-4">Với hơn 10 năm kinh nghiệm trong ngành ẩm thực, chúng tôi tự hào mang đến những món ăn chất lượng cao, được chế biến từ những nguyên liệu tươi ngon nhất, kết hợp với không gian sang trọng và dịch vụ chuyên nghiệp.</p>
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                        <span>Đội ngũ đầu bếp tài năng</span>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                        <span>Nguyên liệu tươi ngon, chất lượng</span>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                        <span>Không gian sang trọng, hiện đại</span>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=1000&auto=format&fit=crop" alt="Câu chuyện của chúng tôi" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="fw-bold">Giá Trị Cốt Lõi</h2>
+                <p class="lead text-muted">Những nguyên tắc định hướng hoạt động của chúng tôi</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Value 1 -->
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="card h-100 border-0 shadow-sm text-center">
+                        <div class="card-body p-4">
+                            <i class="bi bi-heart text-primary display-4 mb-3"></i>
+                            <h3 class="card-title h5 mb-3">Chất Lượng</h3>
+                            <p class="card-text text-muted">Cam kết mang đến những món ăn chất lượng cao nhất với nguyên liệu tươi ngon.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Value 2 -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 border-0 shadow-sm text-center">
+                        <div class="card-body p-4">
+                            <i class="bi bi-people text-primary display-4 mb-3"></i>
+                            <h3 class="card-title h5 mb-3">Dịch Vụ</h3>
+                            <p class="card-text text-muted">Đội ngũ nhân viên chuyên nghiệp, tận tâm phục vụ quý khách.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Value 3 -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 border-0 shadow-sm text-center">
+                        <div class="card-body p-4">
+                            <i class="bi bi-lightbulb text-primary display-4 mb-3"></i>
+                            <h3 class="card-title h5 mb-3">Sáng Tạo</h3>
+                            <p class="card-text text-muted">Liên tục đổi mới và sáng tạo trong ẩm thực để mang đến trải nghiệm độc đáo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="fw-bold">Đội Ngũ Của Chúng Tôi</h2>
+                <p class="lead text-muted">Những người tạo nên hương vị đặc biệt</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Team Member 1 -->
+                <div class="col-lg-3 col-md-6" data-aos="fade-up">
+                    <div class="card border-0 shadow-sm text-center">
+                        <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=800&auto=format&fit=crop" class="card-img-top" alt="Đầu bếp trưởng">
+                        <div class="card-body">
+                            <h5 class="card-title">Nguyễn Văn A</h5>
+                            <p class="card-text text-muted">Đầu Bếp Trưởng</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card border-0 shadow-sm text-center">
+                        <img src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?q=80&w=800&auto=format&fit=crop" class="card-img-top" alt="Phó đầu bếp">
+                        <div class="card-body">
+                            <h5 class="card-title">Trần Thị B</h5>
+                            <p class="card-text text-muted">Phó Đầu Bếp</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card border-0 shadow-sm text-center">
+                        <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=800&auto=format&fit=crop" class="card-img-top" alt="Đầu bếp bánh">
+                        <div class="card-body">
+                            <h5 class="card-title">Lê Văn C</h5>
+                            <p class="card-text text-muted">Đầu Bếp Bánh</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card border-0 shadow-sm text-center">
+                        <img src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?q=80&w=800&auto=format&fit=crop" class="card-img-top" alt="Đầu bếp phụ">
+                        <div class="card-body">
+                            <h5 class="card-title">Phạm Thị D</h5>
+                            <p class="card-text text-muted">Đầu Bếp Phụ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="mb-4">Về Chúng Tôi</h5>
+                    <p>Delicious - Nhà hàng ẩm thực cao cấp với không gian sang trọng và đội ngũ đầu bếp tài năng.</p>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-4">Liên Hệ</h5>
+                    <p><i class="bi bi-geo-alt me-2"></i>123 Đường ABC, Quận 1, TP.HCM</p>
+                    <p><i class="bi bi-telephone me-2"></i>+84 123 456 789</p>
+                    <p><i class="bi bi-envelope me-2"></i>info@delicious.com</p>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-4">Theo Dõi Chúng Tôi</h5>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white" title="Theo dõi chúng tôi trên Facebook"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" class="text-white" title="Theo dõi chúng tôi trên Instagram"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" class="text-white" title="Theo dõi chúng tôi trên Twitter"><i class="bi bi-twitter fs-5"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 Delicious. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

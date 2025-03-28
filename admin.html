@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quản Trị - Nhà Hàng Delicious</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- DataTables CSS -->
+  <link href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+  <link href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.bootstrap5.min.css" rel="stylesheet">
+  <link href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.bootstrap5.min.css" rel="stylesheet">
+  <!-- Toastify CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="admin-header">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center">
+          <img src="images/logo/logo.jpg" alt="Delicious Restaurant" height="40" class="me-2">
+          <h1 class="h4 mb-0">Delicious - Quản Trị</h1>
+        </div>
+        <div class="d-flex align-items-center">
+          <nav class="me-3">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#overview">Tổng Quan</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#customers">Khách Hàng</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#orders">Đơn Hàng</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#menu">Thực Đơn</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#reservations">Đặt Bàn</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="dropdown">
+            <button class="btn btn-outline-secondary dropdown-toggle d-flex align-items-center" type="button" id="userDropdown" data-bs-toggle="dropdown" title="Tùy chọn người dùng">
+              <i class="bi bi-person-circle me-2"></i>
+              <span>admin@gmail.com</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+              <li><a class="dropdown-item" href="#"><i class="bi bi-person me-2"></i>Hồ Sơ</a></li>
+              <li><a class="dropdown-item" href="#"><i class="bi bi-gear me-2"></i>Cài Đặt</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item text-danger" href="login.html"><i class="bi bi-box-arrow-right me-2"></i>Đăng Xuất</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Thông tin đăng nhập -->
+    <div class="alert alert-info mt-3 mb-4" role="alert">
+      <i class="bi bi-info-circle me-2"></i> Tài khoản admin: admin@gmail.com / 0000
+    </div>
+
+    <!-- Phần 1: Tổng Quan -->
+    <div id="overview" class="anchor-target"></div>
+    <section class="mb-5">
+      <div class="section-header">
+        <h2 class="section-title">Tổng Quan Nhà Hàng</h2>
+        <p class="text-muted">Số liệu thống kê và báo cáo</p>
+      </div>
+
+      <!-- Dashboard Stats -->
+      <div class="row g-4 mb-4">
+        <div class="col-md-3">
+          <div class="stats-card">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <h6 class="card-subtitle mb-2 text-muted">Tổng Doanh Thu</h6>
+                <h3 class="card-title mb-0">32,500,000₫</h3>
+                <small class="text-success"><i class="bi bi-arrow-up"></i> 18% so với tháng trước</small>
+              </div>
+              <div class="bg-primary bg-opacity-10 p-3 rounded stats-icon">
+                <i class="bi bi-cash-stack text-primary fs-4"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="stats-card">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <h6 class="card-subtitle mb-2 text-muted">Số Đơn Hàng</h6>
+                <h3 class="card-title mb-0">156</h3>
+                <small class="text-success"><i class="bi bi-arrow-up"></i> 12% so với tháng trước</small>
+              </div>
+              <div class="bg-success bg-opacity-10 p-3 rounded stats-icon">
+                <i class="bi bi-bag-check text-success fs-4"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="stats-card">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <h6 class="card-subtitle mb-2 text-muted">Số Món Ăn</h6>
+                <h3 class="card-title mb-0">42</h3>
+                <small class="text-success"><i class="bi bi-arrow-up"></i> 5% so với tháng trước</small>
+              </div>
+              <div class="bg-warning bg-opacity-10 p-3 rounded stats-icon">
+                <i class="bi bi-cup-hot text-warning fs-4"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="stats-card">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <h6 class="card-subtitle mb-2 text-muted">Lượt Khách</h6>
+                <h3 class="card-title mb-0">285</h3>
+                <small class="text-success"><i class="bi bi-arrow-up"></i> 8% so với tháng trước</small>
+              </div>
+              <div class="bg-info bg-opacity-10 p-3 rounded stats-icon">
+                <i class="bi bi-people text-info fs-4"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Charts -->
+      <div class="row mb-4">
+        <div class="col-lg-8 mb-4 mb-lg-0">
+          <div class="section-card h-100">
+            <div class="card-header d-flex justify-content-between align-items-center">
+              <h5 class="mb-0">Doanh Thu Theo Tháng</h5>
+              <div class="dropdown">
+                <button class="btn btn-sm btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                  Năm 2024
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">2024</a></li>
+                  <li><a class="dropdown-item" href="#">2023</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-body">
+              <canvas id="revenueChart" height="300"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="section-card h-100">
+            <div class="card-header">
+              <h5 class="mb-0">Món Ăn Phổ Biến</h5>
+            </div>
+            <div class="card-body">
+              <canvas id="popularDishesChart" height="300"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Orders -->
+      <div class="section-card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <h5 class="mb-0">Đơn Hàng Gần Đây</h5>
+          <a href="#orders" class="btn btn-sm btn-primary">Xem Tất Cả</a>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>Mã Đơn</th>
+                  <th>Khách Hàng</th>
+                  <th>Ngày</th>
+                  <th>Tổng Tiền</th>
+                  <th>Trạng Thái</th>
+                  <th>Thanh Toán</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#ORD001</td>
+                  <td>Nguyễn Văn A</td>
+                  <td>21/04/2024</td>
+                  <td>450,000₫</td>
+                  <td><span class="badge bg-success">Hoàn Thành</span></td>
+                  <td><span class="badge bg-primary">Đã Thanh Toán</span></td>
+                </tr>
+                <tr>
+                  <td>#ORD002</td>
+                  <td>Trần Thị B</td>
+                  <td>20/04/2024</td>
+                  <td>750,000₫</td>
+                  <td><span class="badge bg-warning">Đang Chuẩn Bị</span></td>
+                  <td><span class="badge bg-primary">Đã Thanh Toán</span></td>
+                </tr>
+                <tr>
+                  <td>#ORD003</td>
+                  <td>Lê Văn C</td>
+                  <td>20/04/2024</td>
+                  <td>350,000₫</td>
+                  <td><span class="badge bg-info">Đang Giao</span></td>
+                  <td><span class="badge bg-warning">Chưa Thanh Toán</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Phần 2: Khách Hàng -->
+    <div id="customers" class="anchor-target"></div>
+    <section class="mb-5">
+      <div class="section-header">
+        <h2 class="section-title">Quản Lý Khách Hàng</h2>
+        <p class="text-muted">Xem và quản lý thông tin khách hàng</p>
+      </div>
+
+      <!-- Stats Cards -->
+      <div class="row g-4 mb-4">
+        <div class="col-md-3">
+          <div class="stats-card">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <h6 class="card-subtitle mb-2 text-muted">Tổng Khách Hàng</h6>
+                <h3 class="card-title mb-0">1,234</h3>
+                <small class="text-success"><i class="bi bi-arrow-up"></i> 12% so với tháng trước</small>
+              </div>
+              <div class="bg-primary bg-opacity-10 p-3 rounded stats-icon">
+                <i class="bi bi-people text-primary fs-4"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="stats-card">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <h6 class="card-subtitle mb-2 text-muted">Khách Hàng Mới</h6>
+                <h3 class="card-title mb-0">45</h3>
+                <small class="text-success"><i class="bi bi-arrow-up"></i> 8% so với tháng trước</small>
+              </div>
+              <div class="bg-success bg-opacity-10 p-3 rounded stats-icon">
+                <i class="bi bi-person-plus text-success fs-4"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="stats-card">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <h6 class="card-subtitle mb-2 text-muted">Khách VIP</h6>
+                <h3 class="card-title mb-0">89</h3>
+                <small class="text-success"><i class="bi bi-arrow-up"></i> 15% so với tháng trước</small>
+              </div>
+              <div class="bg-warning bg-opacity-10 p-3 rounded stats-icon">
+                <i class="bi bi-star text-warning fs-4"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="stats-card">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <h6 class="card-subtitle mb-2 text-muted">Khách Đặt Bàn</h6>
+                <h3 class="card-title mb-0">28</h3>
+                <small class="text-danger"><i class="bi bi-arrow-down"></i> 5% so với tháng trước</small>
+              </div>
+              <div class="bg-info bg-opacity-10 p-3 rounded stats-icon">
+                <i class="bi bi-calendar-check text-info fs-4"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Customers Table -->
+      <div class="section-card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <h5 class="mb-0">Danh Sách Khách Hàng</h5>
+          <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#addCustomerModal" title="Thêm khách hàng mới">
+            <i class="bi bi-plus-lg me-2"></i>Thêm Khách Hàng
+          </button>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-hover" id="customersTable">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Họ Tên</th>
+                  <th>Email</th>
+                  <th>Số Điện Thoại</th>
+                  <th>Ngày Tham Gia</th>
+                  <th>Loại Khách</th>
+                  <th>Trạng Thái</th>
+                  <th>Thao Tác</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#CUS001</td>
+                  <td>Nguyễn Văn A</td>
+                  <td>nguyenvana@example.com</td>
+                  <td>0987654321</td>
+                  <td>01/01/2024</td>
+                  <td><span class="badge bg-warning">VIP</span></td>
+                  <td><span class="badge bg-success">Hoạt Động</span></td>
+                  <td>
+                    <div class="d-flex">
+                      <button class="btn btn-sm btn-outline-primary me-1" title="Xem chi tiết">
+                        <i class="bi bi-eye"></i>
+                      </button>
+                      <button class="btn btn-sm btn-outline-warning me-1" title="Chỉnh sửa">
+                        <i class="bi bi-pencil"></i>
+                      </button>
+                      <button class="btn btn-sm btn-outline-danger" title="Xóa">
+                        <i class="bi bi-trash"></i>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#CUS002</td>
+                  <td>Trần Thị B</td>
+                  <td>tranthib@example.com</td>
+                  <td>0987654322</td>
+                  <td>15/01/2024</td>
+                  <td><span class="badge bg-primary">Thường</span></td>
+                  <td><span class="badge bg-success">Hoạt Động</span></td>
+                  <td>
+                    <div class="d-flex">
+                      <button class="btn btn-sm btn-outline-primary me-1" title="Xem chi tiết">
+                        <i class="bi bi-eye"></i>
+                      </button>
+                      <button class="btn btn-sm btn-outline-warning me-1" title="Chỉnh sửa">
+                        <i class="bi bi-pencil"></i>
+                      </button>
+                      <button class="btn btn-sm btn-outline-danger" title="Xóa">
+                        <i class="bi bi-trash"></i>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#CUS003</td>
+                  <td>Lê Văn C</td>
+                  <td>levanc@example.com</td>
+                  <td>0987654323</td>
+                  <td>20/01/2024</td>
+                  <td><span class="badge bg-primary">Thường</span></td>
+                  <td><span class="badge bg-success">Hoạt Động</span></td>
+                  <td>
+                    <div class="d-flex">
+                      <button class="btn btn-sm btn-outline-primary me-1" title="Xem chi tiết">
+                        <i class="bi bi-eye"></i>
+                      </button>
+                      <button class="btn btn-sm btn-outline-warning me-1" title="Chỉnh sửa">
+                        <i class="bi bi-pencil"></i>
+                      </button>
+                      <button class="btn btn-sm btn-outline-danger" title="Xóa">
+                        <i class="bi bi-trash"></i>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Phần 3: Đơn Hàng -->
+    <div id="orders" class="anchor-target"></div>
+    <section class="mb-5">
+      <div class="section-header">
+        <h2 class="section-title">Quản Lý Đơn Hàng</h2>
+        <p class="text-muted">Xem và quản lý đơn hàng</p>
+      </div>
+
+      <!-- Orders Table -->
+      <div class="section-card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <h5 class="mb-0">Danh Sách Đơn Hàng</h5>
+          <div>
+            <button class="btn btn-success btn-sm me-2">
+              <i class="bi bi-file-earmark-excel me-1"></i>Xuất Excel
+            </button>
+            <button class="btn btn-danger btn-sm">
+              <i class="bi bi-file-earmark-pdf me-1"></i>Xuất PDF
+            </button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-hover" id="ordersTable">
+              <thead>
+                <tr>
+                  <th>Mã Đơn</th>
+                  <th>Khách Hàng</th>
+                  <th>Ngày Đặt</th>
+                  <th>Tổng Tiền</th>
+                  <th>Trạng Thái</th>
+                  <th>Thanh Toán</th>
+                  <th>Thao Tác</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#ORD001</td>
+                  <td>Nguyễn Văn A</td>
+                  <td>21/04/2024</td>
+                  <td>450,000₫</td>
+                  <td><span class="badge bg-success">Hoàn Thành</span></td>
+                  <td><span class="badge bg-primary">Đã Thanh Toán</span></td>
+                  <td>
+                    <div class="d-flex">
+                      <button class="btn btn-sm btn-outline-primary me-1" title="Xem chi tiết">
+                        <i class="bi bi-eye"></i>
+                      </button>
+                      <button class="btn btn-sm btn-outline-warning me-1" title="Cập nhật">
+                        <i class="bi bi-pencil"></i>
+                      </button>
+                      <button class="btn btn-sm btn-outline-danger" title="Hủy đơn">
+                        <i class="bi bi-x-circle"></i>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#ORD002</td>
+                  <td>Trần Thị B</td>
+                  <td>20/04/2024</td>
+                  <td>750,000₫</td>
+                  <td><span class="badge bg-warning">Đang Chuẩn Bị</span></td>
+                  <td><span class="badge bg-primary">Đã Thanh Toán</span></td>
+                  <td>
+                    <div class="d-flex">
+                      <button class="btn btn-sm btn-outline-primary me-1" title="Xem chi tiết">
+                        <i class="bi bi-eye"></i>
+                      </button>
+                      <button class="btn btn-sm btn-outline-warning me-1" title="Cập nhật">
+                        <i class="bi bi-pencil"></i>
+                      </button>
+                      <button class="btn btn-sm btn-outline-danger" title="Hủy đơn">
+                        <i class="bi bi-x-circle"></i>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#ORD003</td>
+                  <td>Lê Văn C</td>
+                  <td>20/04/2024</td>
+                  <td>350,000₫</td>
+                  <td><span class="badge bg-info">Đang Giao</span></td>
+                  <td><span class="badge bg-warning">Chưa Thanh Toán</span></td>
+                  <td>
+                    <div class="d-flex">
+                      <button class="btn btn-sm btn-outline-primary me-1" title="Xem chi tiết">
+                        <i class="bi bi-eye"></i>
+                      </button>
+                      <button class="btn btn-sm btn-outline-warning me-1" title="Cập nhật">
+                        <i class="bi bi-pencil"></i>
+                      </button>
+                      <button class="btn btn-sm btn-outline-danger" title="Hủy đơn">
+                        <i class="bi bi-x-circle"></i>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Phần 4: Thực Đơn -->
+    <div id="menu" class="anchor-target"></div>
+    <section class="mb-5">
+      <div class="section-header">
+        <h2 class="section-title">Quản Lý Thực Đơn</h2>
+        <p class="text-muted">Quản lý món ăn và danh mục</p>
+      </div>
+
+      <!-- Menu Stats -->
+      <div class="row g-4 mb-4">
+        <div class="col-md-3">
+          <div class="stats-card">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <h6 class="card-subtitle mb-2 text-muted">Tổng Món Ăn</h6>
+                <h3 class="card-title mb-0">42</h3>
+              </div>
+              <div class="bg-primary bg-opacity-10 p-3 rounded stats-icon">
+                <i class="bi bi-cup-hot text-primary fs-4"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="stats-card">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <h6 class="card-subtitle mb-2 text-muted">Món Ăn Mới</h6>
+                <h3 class="card-title mb-0">8</h3>
+              </div>
+              <div class="bg-success bg-opacity-10 p-3 rounded stats-icon">
+                <i class="bi bi-plus-circle text-success fs-4"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="stats-card">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <h6 class="card-subtitle mb-2 text-muted">Danh Mục</h6>
+                <h3 class="card-title mb-0">6</h3>
+              </div>
+              <div class="bg-warning bg-opacity-10 p-3 rounded stats-icon">
+                <i class="bi bi-grid text-warning fs-4"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="stats-card">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <h6 class="card-subtitle mb-2 text-muted">Hết Hàng</h6>
+                <h3 class="card-title mb-0">3</h3>
+              </div>
+              <div class="bg-danger bg-opacity-10 p-3 rounded stats-icon">
+                <i class="bi bi-x-circle text-danger fs-4"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Menu Management -->
+      <div class="section-card mb-4">
+        <div class="card-header bg-white">
+          <ul class="nav nav-tabs card-header-tabs" id="menuTabs">
+            <li class="nav-item">
+              <a class="nav-link active" id="all-tab" data-bs-toggle="tab" href="#all">Tất Cả Món</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="appetizers-tab" data-bs-toggle="tab" href="#appetizers">Khai Vị</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="main-tab" data-bs-toggle="tab" href="#main">Món Chính</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="desserts-tab" data-bs-toggle="tab" href="#desserts">Tráng Miệng</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="drinks-tab" data-bs-toggle="tab" href="#drinks">Đồ Uống</a>
+            </li>
+          </ul>
+        </div>
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <div class="d-flex">
+              <button class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#addDishModal">
+                <i class="bi bi-plus-lg me-2"></i>Thêm Món Ăn
+              </button>
+              <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#addCategoryModal">
+                <i class="bi bi-folder-plus me-2"></i>Thêm Danh Mục
+              </button>
+            </div>
+            <div class="d-flex">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Tìm kiếm món ăn...">
+                <button class="btn btn-outline-secondary" type="button" title="Tìm kiếm">
+                  <i class="bi bi-search"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="all">
+              <div class="table-responsive">
+                <table class="table table-hover" id="menuTable">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Hình Ảnh</th>
+                      <th>Tên Món</th>
+                      <th>Danh Mục</th>
+                      <th>Giá</th>
+                      <th>Trạng Thái</th>
+                      <th>Thao Tác</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>#MENU001</td>
+                      <td><img src="images/menu/images-2.jpg" alt="Món ăn" width="50" height="50" class="rounded"></td>
+                      <td>Gỏi Cuốn Tôm Thịt</td>
+                      <td>Khai Vị</td>
+                      <td>85,000₫</td>
+                      <td><span class="badge bg-success">Có Sẵn</span></td>
+                      <td>
+                        <div class="d-flex">
+                          <button class="btn btn-sm btn-outline-primary me-1" title="Xem chi tiết">
+                            <i class="bi bi-eye"></i>
+                          </button>
+                          <button class="btn btn-sm btn-outline-warning me-1" title="Chỉnh sửa">
+                            <i class="bi bi-pencil"></i>
+                          </button>
+                          <button class="btn btn-sm btn-outline-danger" title="Xóa">
+                            <i class="bi bi-trash"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>#MENU002</td>
+                      <td><img src="images/menu/images-1.jpg" alt="Món ăn" width="50" height="50" class="rounded"></td>
+                      <td>Bò Lúc Lắc</td>
+                      <td>Món Chính</td>
+                      <td>175,000₫</td>
+                      <td><span class="badge bg-success">Có Sẵn</span></td>
+                      <td>
+                        <div class="d-flex">
+                          <button class="btn btn-sm btn-outline-primary me-1" title="Xem chi tiết">
+                            <i class="bi bi-eye"></i>
+                          </button>
+                          <button class="btn btn-sm btn-outline-warning me-1" title="Chỉnh sửa">
+                            <i class="bi bi-pencil"></i>
+                          </button>
+                          <button class="btn btn-sm btn-outline-danger" title="Xóa">
+                            <i class="bi bi-trash"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>#MENU003</td>
+                      <td><img src="images/menu/vimage-5.jpg" alt="Món ăn" width="50" height="50" class="rounded"></td>
+                      <td>Chè Hạt Sen</td>
+                      <td>Tráng Miệng</td>
+                      <td>45,000₫</td>
+                      <td><span class="badge bg-danger">Hết Hàng</span></td>
+                      <td>
+                        <div class="d-flex">
+                          <button class="btn btn-sm btn-outline-primary me-1" title="Xem chi tiết">
+                            <i class="bi bi-eye"></i>
+                          </button>
+                          <button class="btn btn-sm btn-outline-warning me-1" title="Chỉnh sửa">
+                            <i class="bi bi-pencil"></i>
+                          </button>
+                          <button class="btn btn-sm btn-outline-danger" title="Xóa">
+                            <i class="bi bi-trash"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Phần 5: Đặt Bàn -->
+    <div id="reservations" class="anchor-target"></div>
+    <section class="mb-5">
+      <div class="section-header">
+        <h2 class="section-title">Quản Lý Đặt Bàn</h2>
+        <p class="text-muted">Xem và quản lý thông tin đặt bàn</p>
+      </div>
+
+      <!-- Reservation Stats -->
+      <div class="row g-4 mb-4">
+        <div class="col-md-3">
+          <div class="stats-card">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <h6 class="card-subtitle mb-2 text-muted">Tổng Lượt Đặt</h6>
+                <h3 class="card-title mb-0">65</h3>
+                <small class="text-success"><i class="bi bi-arrow-up"></i> 10% so với tháng trước</small>
+              </div>
+              <div class="bg-primary bg-opacity-10 p-3 rounded stats-icon">
+                <i class="bi bi-calendar-check text-primary fs-4"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="stats-card">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <h6 class="card-subtitle mb-2 text-muted">Đang Chờ</h6>
+                <h3 class="card-title mb-0">12</h3>
+              </div>
+              <div class="bg-warning bg-opacity-10 p-3 rounded stats-icon">
+                <i class="bi bi-hourglass-split text-warning fs-4"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="stats-card">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <h6 class="card-subtitle mb-2 text-muted">Đã Xác Nhận</h6>
+                <h3 class="card-title mb-0">28</h3>
+              </div>
+              <div class="bg-success bg-opacity-10 p-3 rounded stats-icon">
+                <i class="bi bi-check-circle text-success fs-4"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="stats-card">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <h6 class="card-subtitle mb-2 text-muted">Đã Hủy</h6>
+                <h3 class="card-title mb-0">5</h3>
+              </div>
+              <div class="bg-danger bg-opacity-10 p-3 rounded stats-icon">
+                <i class="bi bi-x-circle text-danger fs-4"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reservations Table -->
+      <div class="section-card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <h5 class="mb-0">Danh Sách Đặt Bàn</h5>
+          <button class="btn btn-primary btn-sm">
+            <i class="bi bi-plus-lg me-2"></i>Thêm Đặt Bàn
+          </button>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-hover" id="reservationsTable">
+              <thead>
+                <tr>
+                  <th>Mã Đặt Bàn</th>
+                  <th>Khách Hàng</th>
+                  <th>Số Điện Thoại</th>
+                  <th>Ngày</th>
+                  <th>Giờ</th>
+                  <th>Số Người</th>
+                  <th>Trạng Thái</th>
+                  <th>Thao Tác</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#RES001</td>
+                  <td>Nguyễn Văn A</td>
+                  <td>0987654321</td>
+                  <td>25/04/2024</td>
+                  <td>18:30</td>
+                  <td>4</td>
+                  <td><span class="badge bg-warning">Chờ Xác Nhận</span></td>
+                  <td>
+                    <div class="d-flex">
+                      <button class="btn btn-sm btn-outline-primary me-1" title="Xem chi tiết">
+                        <i class="bi bi-eye"></i>
+                      </button>
+                      <button class="btn btn-sm btn-outline-success me-1" title="Xác nhận">
+                        <i class="bi bi-check-lg"></i>
+                      </button>
+                      <button class="btn btn-sm btn-outline-danger" title="Hủy đặt bàn">
+                        <i class="bi bi-x-lg"></i>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#RES002</td>
+                  <td>Trần Thị B</td>
+                  <td>0987654322</td>
+                  <td>25/04/2024</td>
+                  <td>19:00</td>
+                  <td>2</td>
+                  <td><span class="badge bg-success">Đã Xác Nhận</span></td>
+                  <td>
+                    <div class="d-flex">
+                      <button class="btn btn-sm btn-outline-primary me-1" title="Xem chi tiết">
+                        <i class="bi bi-eye"></i>
+                      </button>
+                      <button class="btn btn-sm btn-outline-warning me-1" title="Chỉnh sửa">
+                        <i class="bi bi-pencil"></i>
+                      </button>
+                      <button class="btn btn-sm btn-outline-danger" title="Hủy đặt bàn">
+                        <i class="bi bi-x-lg"></i>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#RES003</td>
+                  <td>Lê Văn C</td>
+                  <td>0987654323</td>
+                  <td>26/04/2024</td>
+                  <td>12:00</td>
+                  <td>6</td>
+                  <td><span class="badge bg-warning">Chờ Xác Nhận</span></td>
+                  <td>
+                    <div class="d-flex">
+                      <button class="btn btn-sm btn-outline-primary me-1" title="Xem chi tiết">
+                        <i class="bi bi-eye"></i>
+                      </button>
+                      <button class="btn btn-sm btn-outline-success me-1" title="Xác nhận">
+                        <i class="bi bi-check-lg"></i>
+                      </button>
+                      <button class="btn btn-sm btn-outline-danger" title="Hủy đặt bàn">
+                        <i class="bi bi-x-lg"></i>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Nút Cuộn Lên Đầu Trang -->
+  <button id="scrollToTop" title="Lên đầu trang">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Modal Thêm Khách Hàng -->
+  <div class="modal fade" id="addCustomerModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Thêm Khách Hàng Mới</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" title="Đóng"></button>
+        </div>
+        <div class="modal-body">
+          <form id="addCustomerForm">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Họ Tên</label>
+                <input type="text" class="form-control" required title="Họ tên khách hàng" placeholder="Nhập họ tên">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" required title="Email khách hàng" placeholder="Nhập email">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Số Điện Thoại</label>
+                <input type="tel" class="form-control" required title="Số điện thoại" placeholder="Nhập số điện thoại">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Ngày Sinh</label>
+                <input type="date" class="form-control" title="Ngày sinh" placeholder="Chọn ngày sinh">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Loại Khách</label>
+                <select class="form-select" required title="Loại khách hàng">
+                  <option value="regular">Thường</option>
+                  <option value="vip">VIP</option>
+                  <option value="wholesale">Sỉ</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Trạng Thái</label>
+                <select class="form-select" required title="Trạng thái khách hàng">
+                  <option value="active">Hoạt Động</option>
+                  <option value="inactive">Không Hoạt Động</option>
+                  <option value="blocked">Bị Chặn</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Địa Chỉ</label>
+                <textarea class="form-control" rows="2" title="Địa chỉ" placeholder="Nhập địa chỉ"></textarea>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" title="Hủy thao tác">Hủy</button>
+          <button type="submit" class="btn btn-primary" form="addCustomerForm" title="Lưu khách hàng">Lưu Khách Hàng</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Thêm Món Ăn -->
+  <div class="modal fade" id="addDishModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Thêm Món Ăn Mới</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" title="Đóng"></button>
+        </div>
+        <div class="modal-body">
+          <form id="addDishForm">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Tên Món Ăn</label>
+                <input type="text" class="form-control" required title="Tên món ăn" placeholder="Nhập tên món ăn">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Danh Mục</label>
+                <select class="form-select" required title="Chọn danh mục món ăn">
+                  <option value="">Chọn danh mục</option>
+                  <option value="appetizer">Khai Vị</option>
+                  <option value="main">Món Chính</option>
+                  <option value="dessert">Tráng Miệng</option>
+                  <option value="drink">Đồ Uống</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Giá (VNĐ)</label>
+                <input type="number" class="form-control" required title="Giá món ăn" placeholder="Nhập giá món ăn">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Trạng Thái</label>
+                <select class="form-select" required title="Trạng thái món ăn">
+                  <option value="available">Có Sẵn</option>
+                  <option value="out_of_stock">Hết Hàng</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Mô Tả</label>
+                <textarea class="form-control" rows="3" title="Mô tả món ăn" placeholder="Nhập mô tả món ăn"></textarea>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Hình Ảnh</label>
+                <input type="file" class="form-control" accept="image/*" title="Chọn hình ảnh món ăn">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" title="Đóng">Hủy</button>
+          <button type="submit" class="btn btn-primary" form="addDishForm" title="Lưu món ăn">Lưu Món Ăn</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Thêm Danh Mục -->
+  <div class="modal fade" id="addCategoryModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Thêm Danh Mục Mới</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" title="Đóng"></button>
+        </div>
+        <div class="modal-body">
+          <form id="addCategoryForm">
+            <div class="mb-3">
+              <label class="form-label">Tên Danh Mục</label>
+              <input type="text" class="form-control" required title="Tên danh mục" placeholder="Nhập tên danh mục">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Mô Tả</label>
+              <textarea class="form-control" rows="2" title="Mô tả danh mục" placeholder="Nhập mô tả danh mục"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" title="Đóng">Hủy</button>
+          <button type="submit" class="btn btn-primary" form="addCategoryForm" title="Lưu danh mục">Lưu Danh Mục</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <!-- Core libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  
+  <!-- DataTables core only -->
+  <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+  
+  <!-- Essential utilities -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  
+  <!-- Custom scripts -->
+  <script src="js/common.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
+

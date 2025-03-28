@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhà Hàng Delicious - Đăng Nhập</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Toastify CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/logo/logo.jpg" alt="Logo" class="logo-image me-2">
+                <span>Delicious</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" title="Mở/đóng menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Trang Chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Giới Thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">Thực Đơn</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Thư Viện Ảnh</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">Sự Kiện</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Liên Hệ</a>
+                    </li>
+                    <li class="nav-item ms-3">
+                        <a href="cart.html" class="position-relative" id="cartIcon" title="Xem giỏ hàng">
+                            <i class="bi bi-cart3 fs-5"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-count">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item ms-3">
+                        <a class="nav-link active" href="login.html">
+                            <i class="bi bi-person-circle fs-5"></i>
+                            <span class="ms-1">Đăng Nhập</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold" data-aos="fade-up">Đăng Nhập</h1>
+            <nav aria-label="breadcrumb" data-aos="fade-up" data-aos-delay="200">
+                <ol class="breadcrumb justify-content-center">
+                    <li class="breadcrumb-item"><a href="index.html" class="text-white">Trang Chủ</a></li>
+                    <li class="breadcrumb-item active text-white" aria-current="page">Đăng Nhập</li>
+                </ol>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Login Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4 p-md-5">
+                            <div class="text-center mb-4">
+                                <img src="images/logo/logo.jpg" alt="Logo" class="logo-image mb-3" style="width: 80px; height: 80px;">
+                                <h2 class="h4 mb-0">Chào mừng trở lại!</h2>
+                                <p class="text-muted">Đăng nhập để tiếp tục</p>
+                                <div class="alert alert-info d-flex align-items-center" role="alert">
+                                    <i class="bi bi-info-circle-fill me-2"></i>
+                                    <div>
+                                        Tài khoản admin: admin@gmail.com / 0000
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Login Form -->
+                            <form id="loginForm">
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                                        <input type="email" class="form-control" id="email" name="email" required 
+                                               placeholder="Nhập email của bạn" title="Email đăng nhập">
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="password" class="form-label">Mật khẩu</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                                        <input type="password" class="form-control" id="password" name="password" required 
+                                               placeholder="Nhập mật khẩu" title="Mật khẩu đăng nhập">
+                                        <button class="btn btn-outline-secondary" type="button" onclick="togglePassword()" title="Hiển thị/ẩn mật khẩu">
+                                            <i class="bi bi-eye"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="remember" name="remember">
+                                        <label class="form-check-label" for="remember">Ghi nhớ đăng nhập</label>
+                                    </div>
+                                    <a href="#" class="text-primary text-decoration-none">Quên mật khẩu?</a>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100 mb-3" title="Đăng nhập">
+                                    <i class="bi bi-box-arrow-in-right me-2"></i>Đăng Nhập
+                                </button>
+
+                                <div class="text-center">
+                                    <p class="mb-0">Chưa có tài khoản? <a href="#" class="text-primary text-decoration-none">Đăng ký ngay</a></p>
+                                </div>
+                            </form>
+
+                            <!-- Social Login -->
+                            <div class="mt-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <hr class="flex-grow-1">
+                                    <span class="px-3 text-muted">hoặc</span>
+                                    <hr class="flex-grow-1">
+                                </div>
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-outline-dark" onclick="loginWithGoogle()" title="Đăng nhập với Google">
+                                        <i class="bi bi-google me-2"></i>Đăng Nhập Với Google
+                                    </button>
+                                    <button class="btn btn-outline-primary" onclick="loginWithFacebook()" title="Đăng nhập với Facebook">
+                                        <i class="bi bi-facebook me-2"></i>Đăng Nhập Với Facebook
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="mb-4">Về Chúng Tôi</h5>
+                    <p>Delicious - Nhà hàng ẩm thực cao cấp với không gian sang trọng và đội ngũ đầu bếp tài năng.</p>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-4">Liên Hệ</h5>
+                    <p><i class="bi bi-geo-alt me-2"></i>123 Đường ABC, Quận 1, TP.HCM</p>
+                    <p><i class="bi bi-telephone me-2"></i>+84 123 456 789</p>
+                    <p><i class="bi bi-envelope me-2"></i>info@delicious.com</p>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-4">Theo Dõi Chúng Tôi</h5>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white" title="Theo dõi chúng tôi trên Facebook"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" class="text-white" title="Theo dõi chúng tôi trên Instagram"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" class="text-white" title="Theo dõi chúng tôi trên Twitter"><i class="bi bi-twitter fs-5"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 Delicious. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="js/common.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // Remove loading screen
+        window.addEventListener('load', function() {
+            document.querySelector('.loading').style.display = 'none';
+        });
+
+        // Check if already logged in
+        if (window.commonFunctions && window.commonFunctions.isLoggedIn()) {
+            window.location.href = 'admin.html';
+        }
+
+        // Toggle password visibility
+        function togglePassword() {
+            const passwordInput = document.getElementById('password');
+            const toggleButton = passwordInput.nextElementSibling.querySelector('i');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggleButton.classList.remove('bi-eye');
+                toggleButton.classList.add('bi-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                toggleButton.classList.remove('bi-eye-slash');
+                toggleButton.classList.add('bi-eye');
+            }
+        }
+
+        // Handle login form submission
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            // Kiểm tra tài khoản admin cố định
+            if (email === 'admin@gmail.com' && password === '0000') {
+                // Lưu thông tin đăng nhập
+                localStorage.setItem('adminToken', 'admin_' + Date.now());
+                localStorage.setItem('adminEmail', email);
+                
+                // Chuyển hướng đến trang admin
+                window.location.href = 'admin.html';
+                return;
+            }
+            
+            // Các tài khoản khác nếu có
+            // ...
+        });
+
+        // Social login functions
+        function loginWithGoogle() {
+            // Add Google login logic here
+            alert('Chức năng đăng nhập với Google đang được phát triển!');
+        }
+
+        function loginWithFacebook() {
+            // Add Facebook login logic here
+            alert('Chức năng đăng nhập với Facebook đang được phát triển!');
+        }
+
+        // Thay đổi hàm validateLogin trong trang login.html
+        function validateLogin(email, password) {
+            // Tài khoản admin cố định
+            if (email === 'admin@gmail.com' && password === '0000') {
+                return true;
+            }
+            
+            // Các tài khoản khác (nếu có)
+            const validUsers = [
+                { email: 'admin@delicious.com', password: 'admin123' },
+                { email: 'manager@delicious.com', password: 'manager123' }
+            ];
+            
+            return validUsers.some(user => 
+                user.email === email && user.password === password
+            );
+        }
+    </script>
+</body>
+</html> 
