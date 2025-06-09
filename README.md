@@ -6,7 +6,7 @@
 # 🍽️ Delicious - Nhà Hàng Ẩm Thực Cao Cấp
 
 <div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=500&size=40&pause=1000&color=FF6B6B&center=true&vCenter=true&width=600&height=100&lines=Trải+nghiệm+ẩm+thực+tuyệt+vời;Không+gian+sang+trọng;Phục+vụ+chuyên+nghiệp" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=500&size=40&pause=1000&color=FF6B6B&center=true&vCenter=true&width=600&height=100&lines=___Trải+nghiệm+ẩm+thực+tuyệt+vời___;___Không+gian+sang+trọng___;___Phục+vụ+chuyên+nghiệp___" alt="Typing SVG" />
 </div>
 
 ## 🚀 Giới thiệu
