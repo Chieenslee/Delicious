@@ -13,6 +13,10 @@
 
 Delicious là nhà hàng ẩm thực cao cấp với không gian sang trọng và đội ngũ đầu bếp tài năng. Chúng tôi tự hào mang đến những trải nghiệm ẩm thực tuyệt vời nhất cho quý khách, phù hợp cho các bữa ăn gia đình, gặp gỡ bạn bè hay các sự kiện đặc biệt.
 
+## 🌐 Demo
+
+Trải nghiệm trực tiếp website tại đây: [Delicious Live Demo](https://chieenslee.github.io/Delicious/)
+
 ## ✨ Tính năng nổi bật
 
 <div align="center">
@@ -73,12 +77,6 @@ Delicious là nhà hàng ẩm thực cao cấp với không gian sang trọng v�
 - `css/`: Thư mục chứa file CSS
 - `js/`: Thư mục chứa file JavaScript
 - `images/`: Thư mục chứa hình ảnh
-
-## 📞 Liên hệ
-
-- 📍 Địa chỉ: 123 Đường ABC, Quận 1, TP.HCM
-- 📞 Điện thoại: +84 123 456 789
-- ✉️ Email: info@delicious.com
 
 ## 🤝 Đóng góp
 
